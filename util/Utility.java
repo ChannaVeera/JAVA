@@ -4,7 +4,8 @@ package com.BridgeIt.util;
 	import java.io.BufferedReader;
 	import java.io.FileInputStream;
 	import java.io.FileNotFoundException;
-	import java.io.InputStreamReader;
+import java.io.FileReader;
+import java.io.InputStreamReader;
 	import java.util.*;
 
 	import com.BridgeIt.AlgorithmPrograms.PrimeNumber;
@@ -1051,7 +1052,57 @@ package com.BridgeIt.util;
 							System.out.println("Not in a range");
 			}
 		}
-		
+//****************************************************************************************************\\
+		/*
+		 * 
+		 * DATA_STRUCTERS
+		 * 
+		 * 
+		 */
+		public static int[] ReadFileInt(String path) throws Throwable
+		{
+			String line;
+			FileReader fr = new FileReader(path); // reading data from file
+			BufferedReader br = new BufferedReader(fr); // reading data from fr object
+			while((line=br.readLine())!=null)
+			{
+				String word[] = line.split(" ");
+
+				int size = word.length;
+				int arr[] = new int[size];
+				/* for loop to convert string to integer data*/
+				for (int i = 0; i < arr.length; i++)
+
+				{
+					arr[i] = Integer.parseInt(word[i]);
+
+				}
+
+				br.close();
+				return arr;
+			}
+				return null;
+				
+		}
+//***************************************************************************************************\\
+		public static String[] fileReadString(String path) throws Exception
+
+		{
+			String line;
+			FileReader fr = new FileReader(path); // reading data from file
+			BufferedReader br = new BufferedReader(fr); // reading data from fr object
+
+			/* reading data from br object and adding it to linkedlist */
+			while ((line = br.readLine()) != null) 
+			{
+				String word[] = line.split(" ");// adding word in file to word array
+
+				return word;
+			}
+			br.close();
+			return null;
+		}
+
 		
 		
 		
