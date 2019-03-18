@@ -24,7 +24,8 @@ public class Queue
 	 }
 	 public void deQueue()
 	 {
-		  String temp = arr[front];// changing position to remove element
+		  @SuppressWarnings("unused")
+		String temp = arr[front];// changing position to remove element
 		  front++;// front has to be changed sequently coz of FIFO
 		  size--;
 	 }
