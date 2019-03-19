@@ -30,8 +30,6 @@ public class Stack<T>
 	}
 	public void display()
 	{
-		
-		
 		if(top==null)
 		{
 			System.out.println(" Oops your stack is fulld");
@@ -53,10 +51,7 @@ public class Stack<T>
 		{
 			System.out.println("Arithmetic  Expression is not balanced");
 			System.exit(0);
-			
 		}
-		
 		top= top.next; // changing reference value
-}
-
+	}
 }

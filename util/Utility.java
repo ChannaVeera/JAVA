@@ -17,19 +17,27 @@ import java.io.InputStreamReader;
 	{
 		/*
 		 *pass the during run time
+		 *
 		 */
+		
 		
 	//*****************************************************************\\
 		public static Scanner scanner=new Scanner(System.in);
 		public static Random random= new Random();
+		/**
+		 * @purpose : To read only word type of input from user and returns
+		 *          string value
+		 * @return : string
+		 **/
+		
 			public static String getStringName()
 			{
-				String name=scanner.next();
+				String name=scanner.next();//calling next method to scan word and store it in a variable
 				return name;
 			}
 			public static int getnumber()
 			{
-				int number=scanner.nextInt();
+				int number=scanner.nextInt();//calling nextInt method to scan word and store it in a variable
 				return number;
 			}
 			public static int getrandom()
@@ -82,8 +90,8 @@ import java.io.InputStreamReader;
 			public static void flip(int numberOfFlips )
 			{
 
-				float head=0;
-				float tail=0;
+				int head=0;
+				int tail=0;
 				try 
 				{
 					
@@ -101,7 +109,7 @@ import java.io.InputStreamReader;
 						}
 					}
 					System.out.println("percent of heads"+(head/numberOfFlips)*100+"%");
-					System.out.println("percent of tails"+(tail/numberOfFlips*100)+"%");
+					System.out.println("percent of tails"+(tail/numberOfFlips)*100+"%");
 					System.out.println(head);
 					System.out.println(tail);
 				}
@@ -115,9 +123,14 @@ import java.io.InputStreamReader;
 		
 			}
 	//****************************************************************************
-			/*power 
-			 * 
-			 */
+			
+			/**
+			 * @purpose : This method take value as an argument and print all the power
+			 *          values of 2
+			 * @exception :
+			 *                it takes arguments between 1-30;
+			 * @return : void
+			 **/
 			public static void power(int power)
 			{
 				System.out.println("enter int value to caluclate");
@@ -346,6 +359,12 @@ import java.io.InputStreamReader;
 				int count=0;
 				
 						int length=n;
+						
+						for(int i=0 ; i< arr.length;i++)
+						{
+							arr[i] = Utility.getnumber();
+						}
+						
 						for(int i=0 ; i< arr.length;i++)
 						{
 							for (int j=i+1;j<arr.length;j++)
@@ -1059,6 +1078,7 @@ import java.io.InputStreamReader;
 		 * 
 		 * 
 		 */
+		@SuppressWarnings("resource")
 		public static int[] ReadFileInt(String path) throws Throwable
 		{
 			String line;
@@ -1090,7 +1110,7 @@ import java.io.InputStreamReader;
 		{
 			String line;
 			FileReader fr = new FileReader(path); // reading data from file
-			BufferedReader br = new BufferedReader(fr); // reading data from fr object
+			BufferedReader br = new BufferedReader(fr); // reading data from for object
 
 			/* reading data from br object and adding it to linkedlist */
 			while ((line = br.readLine()) != null) 
