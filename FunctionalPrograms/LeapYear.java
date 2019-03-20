@@ -10,7 +10,7 @@ public class LeapYear
 		try {
 		System.out.println("Enter year to check");
 		String year=Utility.getStringName();
-		Utility.yeear(year);
+		Utility.year(year);
 		}
 		catch (Exception e)
 		{

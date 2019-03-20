@@ -14,7 +14,7 @@ public class Anagram
 			System.out.println("Enter cahr squence");
 			String s2=Utility.getStringName();
 		
-			Utility.anagramlogic(s1, s2);
+			Utility.anagram(s1, s2);
 			
 		}
 		

@@ -1,4 +1,12 @@
 package com.BridgeIt.DataStructres;
+/******************************************************************************************
+ * 	@purpose      :  To hold all the method of linkedlist 
+ *  
+ *  @author       : NK.CHANNAVEERA
+ *  @version      : 1.0
+ *  @since        : 18-03-2019
+ ******************************************************************************************/
+
 
 public class LinkedList<T>//T stands for generic 
 {
@@ -9,10 +17,11 @@ public class LinkedList<T>//T stands for generic
 		Node next;
 	}
 
- 
- //    : This  method is used to add String data to a linkedlist
-
-	
+	/**
+	 * @parm T       : It takes generic datatype as command line arugument
+	 * @purpose      : This  method is used to add String data to a linkedlist
+	 * @return       : void
+	 **/	
 	public  void add(T data)
 	{
 		Node node = new Node(); // creating nodes
@@ -34,12 +43,13 @@ public class LinkedList<T>//T stands for generic
 		}
 		
 	}
-
-  // : This  method is used to  display the data which is in linkedlist object
-
-	 public void display()
-	 
-	 {
+	/**
+	 * @purpose   : This  method is used to  display the data which is in linkedlist object
+	 * @return    : void
+	 **/	
+					
+		public void display()
+		{
 		 Node n = head; // making n as head node
 		 
 		while (n.next!=null)
@@ -51,8 +61,11 @@ public class LinkedList<T>//T stands for generic
 		 
 	 }
 
-   //   : This  method is used to search a specific element in a linkedlist
-  
+	 /**
+	  * @parm  T        : It takes generic data type as command line arugument
+	  * @purpose        : This  method is used to search a specific element in a linkedlist
+	  * @return         : boolean
+	  **/
 	 
 	 public boolean search(T word)
 	 
@@ -79,8 +92,11 @@ public class LinkedList<T>//T stands for generic
 	 }
 	 
 
- // This  method is used to delete a specific element in a linkedlist
-
+	 /**
+	  * @parm T       : It takes generic data type as command line arugument
+	  * @purpose      : This  method is used to delete a specific element in a linkedlist
+	  * @return       : void
+	  **/	
 	 
 	 public void delete(T ele)
 	
@@ -101,11 +117,12 @@ public class LinkedList<T>//T stands for generic
 			n1=n;
 			n=n.next;
 		}
-		
-
-    // This  method is used to add element at first position of linkedlist	 
 	 }
-	 
+	 /**
+	  * @parm T  : It takes generic data type as command line arugument
+	 * @purpose       : This  method is used to add element at first position of linkedlist
+	 * @return        : void
+	 **/	
 	 public void addFirst(T  data)
 	 {
 		Node node = new Node(); // creating object 
@@ -116,7 +133,10 @@ public class LinkedList<T>//T stands for generic
 	 }
 	 
  
-  // This  method is used to covert words in a list to string
+	 /**
+	  * @purpose   : This  method is used to covert words in a list to string
+	  * @return    : string
+	  **/
   
 	 public String getString()
 	 {

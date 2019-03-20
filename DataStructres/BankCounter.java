@@ -1,4 +1,11 @@
 package com.BridgeIt.DataStructres;
+/****************************************************************************************************
+ * 	@purpose      :  To add people to queue to withdraw or deposit money and remove them from queue
+ *  
+ *  @author       :  NK.CHANNAVEERA
+ *  @version      : 1.0
+ *  @since        : 18-03-2019
+ ******************************************************************************************************/
 
 import com.BridgeIt.util.Utility;
 

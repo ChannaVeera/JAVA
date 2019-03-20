@@ -1,49 +1,78 @@
 package com.BridgeIt.DataStructres;
+/******************************************************************************************
+ * 	@purpose      :  To hold all the method of queue class 
+ *  
+ *  @author       : NK.CHANNAVEERA
+ *  @version      : 1.0
+ *  @since        : 19-03-2019
+ ******************************************************************************************/
 
 public class Queue
 {
 
+
 	int size;
 	int front;
 	int rear;
-	String arry[] ;
+	String arr[] ;
 	int arrSize;
    /*calling constructor to intialize array size*/
 	public Queue(int arrSize)
+	
 	{
 		this.arrSize = arrSize; // globalizing array size
-		 arry = new String [arrSize];
+		 arr = new String [arrSize];
 	}
 	
-
+/**
+ * @param string  : It takes string   as command line arguments 
+ * @purpose     : To add a string  element to object at front
+ * @return      : void 
+ */
    public void enQueue(String data)
-    {
-	   arry[rear] = data; // adding data to rear element
+ 
+   {
+	   arr[rear] = data; // adding data to rear element
 	   rear++; // changing rear position 
 	   size++; // incrementing size
 	   
    }
    
-  
+  /**
+   * @purpose     : to find no of elements in object
+   * @return      : int 
+   */
    public int size()
    {
 	   return size; // returns the size of array
    }
    
+   /**
+    * @purpose     : To remove element
+    * @return      : void 
+    */
    public void deQueue()
    {
-	  String temp = arry[front];// changing position to remove element
+	  @SuppressWarnings("unused")
+	String temp = arr[front];// changing position to remove element
 	  front++;
 	  size--;
 	   
    }
+   
+  /**
+   * @purpose     : To display the elements in queue
+   * @return      : void 
+   */
+   
    public void show()
    {
 	   /*for loop to display all elements in queue*/
 	   for (int i=0;i<size;i++)
 	   {
-		   System.out.print(arry[front+i]+" ");
+		   System.out.print(arr[front+i]+" ");
 	   }
 	   System.out.println();
    }
+
 }

@@ -285,7 +285,7 @@ import java.io.InputStreamReader;
 			 * 
 			 * 
 			 */
-			public static void yeear(String year)
+			public static void year(String year)
 			{
 
 				try //coz throw excption after entering alpabits
@@ -471,48 +471,48 @@ import java.io.InputStreamReader;
 			/*Starts
 			 * BridgeIT.AlgorithmPrograms
 			 * 
-			 * 
-			 * 
-			 * 
-			 * 
 			 */
+			
+			 /**
+			 * @purpose : This method is used to find weather the given strings are anagram
+			 *          are not
+			 * @return : boolean
+			 **/
 			public static char[] covertionOfStringToCharacterArray(String s1) 
 			{
 					char[] c1 = s1.toCharArray();
 					
 					return c1;
 			}
-			public static Boolean anagramlogic(String s1,String s2)
-			
-			{
-					int s1Lenght=s1.length();
-				// takes lenght 
-					int s2Lenght=s1.length();
-				if (s1Lenght==s2Lenght)
+			public static boolean anagram(String s1, String s2)
+
+			{ // To make sure that there is no word case problems while performing action
+				s1 = s1.toUpperCase();
+				s2 = s2.toUpperCase();
+
+				// Converting strings in to character array
+				char ch[] = s1.toCharArray();
+				char ch1[] = s2.toCharArray();
+
+				// sorting the character array
+				Arrays.sort(ch);
+				Arrays.sort(ch1);
+
+				// Converting strings in to character array
+				String s3 = String.valueOf(ch);
+				String s4 = String.valueOf(ch1);
+
+				// condition checking for anagram
+				if (s3.length() == s4.length()) 
 				{
-					char[] char1= Utility.covertionOfStringToCharacterArray(s1);
-					//converting String Char[] using inbuilt method
-					char[] char2 =Utility.covertionOfStringToCharacterArray(s2);
-					Arrays.sort(char1);
-					Arrays.sort(char2);
-					String s3 =new String(char1);
-					//creating object to Store the value of sorted []
-					String s4= new String(char2);
-					if (s3.contains(s4))
+					if (s3.equals(s4)) 
 					{
-						System.out.println("Given char squence is Anagram");
 						return true;
 					}
-					else
-					{
-						System.out.println("Given char squence is NotAnagram");
-						
-					}
-		
 				}
 				return false;
-				
-			}
+
+		}
 	//*****************************************************************************\\
 			/*
 			 * 
@@ -524,29 +524,62 @@ import java.io.InputStreamReader;
 
 				// creating a string type array list to store prime numbers
 				ArrayList<String> al = new ArrayList<String>();
-			
+			int  status=0;
 				// loop to repeate range times
 				for (i = 1; i <= range; i++)
 				{
-					
-
-						if (i % 2 == 0) 
+					for(int j=2;j<i;j++)
+					{
+						if (i % j == 0) 
 						{
-							al.add(i + "");
-							System.out.println("values ar"+i);
+							status++;
+							
+							//System.out.println("values ar"+i);
 						}
-						
-						
-						
+					}
+				if(status==0)
+				{
+					al.add(i + "");
 				}
-				
-				
-					
-
-						// adding prime numbers to arraylist
+			}						
+				// adding prime numbers to arraylist
 						return al;
 
 				}
+			//*****************************************************\\
+			public static int[]prime ()
+			{
+			  int status = 1;
+			  int num=3;
+		      int[] arr=new int[167];
+		      int[][]arr1=new int[10][167];
+		      int i,j;
+		    
+		      System.out.println("First 1000 prime numbers are:");   
+		      for (  i =0 ; i <=166; )
+		      {
+		         for (  j = 2 ; j <= Math.sqrt(num) ; j++ )
+		         {
+		            if ( num%j == 0 )
+		            {
+		               status = 0;
+		               break;
+		            }
+		         }
+		         if ( status != 0 )
+		         {
+		        	
+		           arr[i]=num;
+		           i++;
+		        	
+		         }
+		        
+		         status = 1;
+		         num++;
+		         
+		      }
+			return arr;
+		}
 				
 				
 	//*******************************************************************************\\
@@ -891,7 +924,7 @@ import java.io.InputStreamReader;
 			public static ArrayList<String>  primeAnagram()
 			{
 				ArrayList<String> arraylist =new ArrayList<>();
-				ArrayList<String> arrayList = new ArrayList<>();
+				ArrayList<String> arrayList2 = new ArrayList<>();
 				arraylist.addAll(PrimeNUmber(1000));
 				int size =arraylist.size();
 				String[] arr = new String[size];
@@ -900,13 +933,13 @@ import java.io.InputStreamReader;
 				{
 					for(int j =0 ;j<arr.length;j++)
 					{
-						if(anagramlogic(arr[i], arr[j])== true)
+						if(anagram(arr[i], arr[j])== true)
 						{
-							arrayList.add(arr[i]);
+							arrayList2.add(arr[i]);
 						}
 					}
 				}
-				return arrayList;
+				return arrayList2;
 			}
 			/////*
 		
@@ -957,9 +990,9 @@ import java.io.InputStreamReader;
 
 			///::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 			
-				public static int getDay(int month,int year)
+				public static int getDay(int month,int day ,int year)
 				{
-					final int day=1;
+			
 					/*standard formulas to find the day falls on the date */
 					int y = year - (14 - month) / 12;
 					int x = y + y / 4 - y / 100 + y / 400;
@@ -1122,7 +1155,33 @@ import java.io.InputStreamReader;
 			br.close();
 			return null;
 		}
+//*********************************************************************************************\\
 
+/**
+ * @purpose      : This method is used to  convert arraylist to integer array
+ * @return       : integer array
+ **/
+	public static int[] convertToIntegerArray ()
+	{
+		// creating arraylist object to store prime  numbers
+		ArrayList <String> al = new ArrayList<String>();
+		al = primeAnagram();// calling prime method to get all prime numbers between 1-1000
+		int size = al.size();
+		String arr[] = new String [size];
+		int prime [] = new int [size];
+		/*loop to store elements in a string array*/
+		for (int i=0;i<arr.length;i++)
+		{
+			arr[i] = al.get(i);
+		}
+		/*loop to convert string array to integer array */
+		for (int i=0;i<arr.length;i++)
+		{
+			prime [i] = Integer.parseInt(arr[i]);// calling method to convert string to integer
+		}
+		return prime; // returning prime array
+		
+}
 		
 		
 		

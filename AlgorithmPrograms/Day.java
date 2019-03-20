@@ -16,7 +16,7 @@ public class Day
 				int month = Utility.getnumber();
 				System.out.println("enter year");
 				int year = Utility.getnumber();
-				Utility.getDay(month, year) ;// calling method to find the day
+				Utility.getDay(month, 1, year) ;// calling method to find the day
 			}
 			catch (Exception e) 
 			{

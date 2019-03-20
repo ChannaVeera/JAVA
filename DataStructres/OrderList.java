@@ -1,4 +1,11 @@
 package com.BridgeIt.DataStructres;
+/******************************************************************************************
+ * 	@purpose      :  To read a list of numbers  from  file and search for a number,if the is found,delete it,if word is not found add the number to file
+ *  
+ *  @author       :  NK.CHANNAVEERA
+ *  @version      : 1.0
+ *  @since        : 18-03-2019
+ ******************************************************************************************/
 
 import java.io.PrintWriter;
 import java.util.Arrays;

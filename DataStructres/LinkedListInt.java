@@ -72,9 +72,9 @@ public class LinkedListInt
  		{
  			Node n = new Node();
  			Node n1=null;
- 			for(int i=0;i<index;i++) {
+ 			for(int i=0;i<index;i++) 
+ 			{
  				n=n.next;
- 				
  			}
  			n1=n.next;
  			n.next=n1.next;

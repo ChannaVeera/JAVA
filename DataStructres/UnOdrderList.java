@@ -1,8 +1,15 @@
 package com.BridgeIt.DataStructres;
+/******************************************************************************************
+ * 	@purpose      :  To read a String type file and search for a word,if the is found,delete it,if word is not found add the word to file
+ *  
+ *  @author       :  NK.CHANNAVEERA
+ *  @version      : 1.0
+ *  @since        : 18-03-2019
+ ******************************************************************************************/
 
 import java.io.PrintWriter;
 
-import javax.swing.plaf.synth.SynthScrollBarUI;
+
 
 import com.BridgeIt.util.Utility;
 

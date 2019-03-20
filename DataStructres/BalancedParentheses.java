@@ -1,4 +1,12 @@
 package com.BridgeIt.DataStructres;
+/******************************************************************************************
+* 	@purpose      :  To find given Arithmetic Expression is  balanced or not
+*  
+*  @author       : NK.CHANNAVEERA
+*  @version      : 1.0
+*  @since        : 19-03-2019
+******************************************************************************************/
+
 
 import com.BridgeIt.util.Utility;
 
