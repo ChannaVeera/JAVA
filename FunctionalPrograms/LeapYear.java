@@ -1,4 +1,11 @@
 package com.BridgeIt.FunctionalPrograms;
+/******************************************************************************************
+ * 	@purpose      :  To find wheather the given year is leap year or not
+ *  
+ *  @author       :  NK.CHANNAVEERA
+ *  @version      : 1.0
+
+ ******************************************************************************************/
 
 import com.BridgeIt.util.Utility;
 

@@ -1,13 +1,21 @@
 package com.BridgeIt.DataStructres;
+/******************************************************************************************
+ * 	@purpose      :  To print prime anagram numbers between 1-1000 in a 2D array,1-100 first row,100-200 second row and so on
+ *  
+ *  @author       : NK.CHANNAVEERA
+ *  @version      : 1.0
+ *  @since        : 20-01-2019
+ ******************************************************************************************/
 
 import com.BridgeIt.util.Utility;
 
-public class PrimeAnagram2D 
+public class Prime2D 
 {
 
 	/**
 	 * @param args : It takes string array as command line aruguments
 	 */
+
 	public static void main(String[] args)
 
 	{

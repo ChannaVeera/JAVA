@@ -3,9 +3,9 @@ package com.BridgeIt.DataStructres;
 /******************************************************************************************
  * 	@purpose      :  To hold common functions of queue using linkedlist class
  *  
- *  @author       :  M.venkat reddy
+ *  @author       :  NK.CHANNAVEERA
  *  @version      : 1.0
- *  @since        : 16-01-2019
+ *  @since        : 20-03-2019
  ******************************************************************************************/
 
 public class QueueUsingLinkedList<T>
@@ -54,7 +54,8 @@ public class QueueUsingLinkedList<T>
 			System.out.print(temp.data+ "  ");
 			temp = temp.ref; // changing reference value
 		}
-		System.out.println(temp.data+"  "); // printing last data element
+		System.out.print(temp.data+"  "); // printing last data element
+		System.out.println();
 	}
 	
 /**

@@ -7,21 +7,21 @@ package com.BridgeIt.DataStructres;
  *  @since        : 19-03-2019
  ******************************************************************************************/
 
-public class Queue
+public class Queue<T>
 {
 
 
 	int size;
 	int front;
 	int rear;
-	String arr[] ;
+	T arr[] ;
 	int arrSize;
    /*calling constructor to intialize array size*/
 	public Queue(int arrSize)
 	
 	{
 		this.arrSize = arrSize; // globalizing array size
-		 arr = new String [arrSize];
+		 arr = (T[]) new String [arrSize];
 	}
 	
 /**
@@ -29,9 +29,8 @@ public class Queue
  * @purpose     : To add a string  element to object at front
  * @return      : void 
  */
-   public void enQueue(String data)
- 
-   {
+   public void enQueue(T data)
+  {	
 	   arr[rear] = data; // adding data to rear element
 	   rear++; // changing rear position 
 	   size++; // incrementing size
@@ -54,7 +53,7 @@ public class Queue
    public void deQueue()
    {
 	  @SuppressWarnings("unused")
-	String temp = arr[front];// changing position to remove element
+	T temp = arr[front];// changing position to remove element
 	  front++;
 	  size--;
 	   

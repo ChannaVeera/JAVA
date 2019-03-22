@@ -35,36 +35,74 @@ import java.io.InputStreamReader;
 				String name=scanner.next();//calling next method to scan word and store it in a variable
 				return name;
 			}
+			/**
+			 * @purpose : To read only int type of input from user and returns a boolean
+			 *          value
+			 * @return : boolean
+			 **/
+
 			public static int getnumber()
 			{
 				int number=scanner.nextInt();//calling nextInt method to scan word and store it in a variable
 				return number;
 			}
+			/**
+			 * @purpose : To read only rabdon type of input from user and returns a boolean
+			 *          value
+			 * @return : boolean
+			 **/
+
 			public static int getrandom()
 			{
 				int ranvalue= random.nextInt(10000);
 				
 				return ranvalue ;
 				
-			}
+			}/**
+			 * @purpose : To read only boolean type of input from user and returns a boolean
+			 *          value
+			 * @return : boolean
+			 **/
+
 			public static double  getranDouble()
 			{
 				double pointvalue=random.nextDouble();
 				return pointvalue;
-			}
+			}/**
+			 * @purpose : To read only boolean type of input from user and returns a boolean
+			 *          value
+			 * @return : boolean
+			 **/
+
 		
 			public static double getDouble()
 			{
 				double value=scanner.nextDouble();
 				return value;
 			}
+			/**
+			 * @purpose : To read only boolean type of input from user and returns a boolean
+			 *          value
+			 * @return : boolean
+			 **/
+
 			public static String getNextLine()
 			{
 				String s1= scanner.nextLine();
 				return s1;
 			}
 			
-			
+			/**
+			 * @purpose : To read only boolean type of input from user and returns a boolean
+			 *          value
+			 * @return : boolean
+			 **/
+
+			public static boolean scanBoolean() {
+				boolean s = scanner.nextBoolean();//calling next method to scan boolean value and store it in a variable
+				return s;
+			}
+
 			
 	//****************************************************************\\     
 			/*harmonic value printing 
@@ -156,10 +194,11 @@ import java.io.InputStreamReader;
 				
 			
 	//************************************************************************************
-		/*
-		 * PrimeFactor
-		 * 
-		 */
+			/**
+			 * @purpose : This method to get values of primefacter
+			 *  @param :n integer value             
+			 * @return : void
+			 **/
 			public static void primeFactors(int n) 
 			{ 
 			    // Print the number of 2s that divide n 
@@ -188,56 +227,35 @@ import java.io.InputStreamReader;
 			} 
 
 	//*********************************************************************************************
-			/*
-			 * 
-			 * 
+			
+			/**
+			 * @purpose gambler
+			 * @param stake
+			 * @param goal
+			 * @param trials
+			 * @return
 			 */
-			public static void gamblerpro(int stack, int goal,int times)
-			{
-				int win=0;
-				int bet=0;
-				int loose=0;
-				int cash = 0;
-				for (int i=1;i<=times;i++)
-					/*
-					 * time is users intresr to play how may times 
-					 */
-				
+			public static int[] playGame(int stake, int goal, int trials) {
+				int wins = 0;
+				int bets = 0;
+				for (int i = 1; i <= trials; i++)
 				{
-					 cash=stack;
-					while (cash>0&&cash<=goal)//cash must grater then zero to bet in game 
-						/*
-						 * 
-						 */
+					int cash = stake;
+
+					while (cash > 0 && cash < goal) 
 					{
-						if(Math.random()<1)
-						{
+						bets++;
+						if (Math.random() >= 0.5)
 							cash++;
-						}
-						else 
-						{
+						else
 							cash--;
-						}
-						
 					}
-					if(cash>=goal)
-					{
-						win++;
-					}
-					else
-					{
-						loose++;
-					}
-					
+					if (cash == goal)
+						wins++;
+
 				}
-				System.out.println(cash);
-				System.out.println(win+" wins of "+times);
-				System.out.println(loose+"looses of "+times);
-				System.out.println(" percentage of wins is "+100.0*win/times);
-				System.out.println(" average bets percentage is "+ 1.0*bet/times);
-				
-				
-			}
+				return new int[] { bets, wins };
+		}
 	//********************************************************************************************
 			/*
 			 * 
@@ -484,6 +502,7 @@ import java.io.InputStreamReader;
 					
 					return c1;
 			}
+			//
 			public static boolean anagram(String s1, String s2)
 
 			{ // To make sure that there is no word case problems while performing action
@@ -507,6 +526,7 @@ import java.io.InputStreamReader;
 				{
 					if (s3.equals(s4)) 
 					{
+						System.err.println("yes its");
 						return true;
 					}
 				}
@@ -520,27 +540,34 @@ import java.io.InputStreamReader;
 			 */
 			public static ArrayList<  String> PrimeNUmber(int range)
 			{
-				int i = 0;
+				
 
 				// creating a string type array list to store prime numbers
+				
+				int  status=0;
+				int num=3;
+				int[] arr=new int[167];
+				int[][]arr1=new int[10][167];
+				int i,j;
 				ArrayList<String> al = new ArrayList<String>();
-			int  status=0;
-				// loop to repeate range times
-				for (i = 1; i <= range; i++)
-				{
-					for(int j=2;j<i;j++)
-					{
-						if (i % j == 0) 
-						{
-							status++;
-							
-							//System.out.println("values ar"+i);
-						}
-					}
-				if(status==0)
+		      System.out.println("First 1000 prime numbers are:");   
+		      for (  i =0 ; i <=166; )
+		      {
+		         for (  j = 2 ; j <= Math.sqrt(num) ; j++ )
+		         {
+		            if ( num%j == 0 )
+		            {
+		               status = 0;
+		               break;
+		            }
+		         }
+				if(status!=0)
 				{
 					al.add(i + "");
+					i++;
 				}
+				status = 1;
+		         num++;
 			}						
 				// adding prime numbers to arraylist
 						return al;
@@ -562,6 +589,7 @@ import java.io.InputStreamReader;
 		         {
 		            if ( num%j == 0 )
 		            {
+		            	//
 		               status = 0;
 		               break;
 		            }
@@ -941,8 +969,30 @@ import java.io.InputStreamReader;
 				}
 				return arrayList2;
 			}
-			/////*
-		
+			//***********************************************\\
+			public static boolean isAnagram(String str1,String str2)
+			{
+				String s1=str1.replaceAll("\\s", "");
+				String s2=str2.replaceAll("\\s", "");
+				boolean status=false;
+				
+				if(s1.length()!=s2.length())
+				{
+					status=false;
+				}			
+				
+				char[]arrs1=s1.toLowerCase().toCharArray();
+				char[]arrs2=s2.toLowerCase().toCharArray();
+				
+				Arrays.sort(arrs1);
+				Arrays.sort(arrs2);
+				
+				status=Arrays.equals(arrs1, arrs2);
+				
+				return status;
+				
+		}	
+			//***********
 			public static ArrayList<Integer> palindrome() 
 			{
 

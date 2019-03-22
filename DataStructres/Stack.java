@@ -34,7 +34,7 @@ public class Stack<T>
 	 * @purpose   : This method is used to display the elements in object	  
 	 * @return    : void 
 	 ***/
-		public void display()
+		public void peek()
 		
 		{
 			if (top == null)

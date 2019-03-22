@@ -18,10 +18,10 @@ public class UnOdrderList
 	public static void main(String[] args) throws Exception
 	{
 		String outPut;
-		String path ="/home/admin123/Documents/StringFile.txt";
+		String path ="/home/admin123/Documents/StringFile.txt";// path to get file
 		LinkedList<String> linkedList= new LinkedList<String>();
 		PrintWriter printWriter = new PrintWriter("StringFile.txt");
-		String[] word=Utility.fileReadString(path);
+		String[] word=Utility.fileReadString(path);// storing data into word after 
 		for( int i=0;i<word.length;i++)
 		{
 			linkedList.add(word[i]);
@@ -36,6 +36,7 @@ public class UnOdrderList
 			linkedList.delete(searchElement);
 			linkedList.display();
 			outPut=linkedList.getString();
+			System.out.println("out");
 			printWriter.write(outPut);			
 		}
 		else
@@ -46,13 +47,9 @@ public class UnOdrderList
 			linkedList.display();
 			outPut=linkedList.getString();
 			printWriter.write(outPut);
-		}
-		
+		}		
 		printWriter.flush();
-		printWriter.close();
-		
-		
-		
+		printWriter.close();						
 	}
 
 }

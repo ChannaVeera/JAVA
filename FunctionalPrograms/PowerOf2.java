@@ -1,4 +1,13 @@
 package com.BridgeIt.FunctionalPrograms;
+/******************************************************************************************
+ * 	@purpose       :  To find power value of 2 till  n th time
+ *  
+ *  @author       :NK.CHANNAVEERA
+ *  @version      : 1.0
+ 
+ ******************************************************************************************/
+
+
 
 import com.BridgeIt.util.Utility;
 

@@ -1,4 +1,11 @@
 package com.BridgeIt.FunctionalPrograms;
+/******************************************************************************************
+ * 	@purpose      :  To find the distance from (x,y) origin to (0,0) origin
+ *  
+ *  @author       :  NK.CHANNAVEERA
+ *  @version      : 1.0
+ 
+ ******************************************************************************************/
 
 
 

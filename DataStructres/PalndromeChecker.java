@@ -45,7 +45,7 @@ public class PalndromeChecker
 			System.out.println("word is not palindrome");
 			
 		}
-		
+	
 	}
 	
 

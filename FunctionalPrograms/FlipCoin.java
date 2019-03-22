@@ -1,4 +1,11 @@
 package com.BridgeIt.FunctionalPrograms;
+/******************************************************************************************
+ * 	@purpose      :  To find the win percentage and loss percentage when a coin is flipped n times
+ *  
+ *  @author       :  NK.CHANNAVEERA
+ *  @version      : 1.0
+
+ ******************************************************************************************/
 
 import com.BridgeIt.util.Utility;
 

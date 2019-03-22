@@ -1,4 +1,10 @@
 package com.BridgeIt.FunctionalPrograms;
+/******************************************************************************************
+ * 	@purpose      :  To find the n th harmonic number and print it
+ *  
+ *  @author       : NK.CHANNAVEERA
+ *  @version      : 1.0
+ ******************************************************************************************/
 
 import com.BridgeIt.util.Utility;
 

@@ -38,7 +38,7 @@ public class BalancedParentheses
 		else
 		{
 			System.out.println("Arithmetic Expression not balanced");
-}
+		}
 		
 	}
 }
