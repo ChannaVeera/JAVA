@@ -1,12 +1,13 @@
 package com.BridgeIt.DataStructres;
 
+import com.BridgeIt.DSUtlity.Stack_;
 import com.BridgeIt.util.Utility;
 
 public class AnagramStack {
 
 	@SuppressWarnings("unchecked")
 	public static void main(String[] args) {
-		Stack_ a = new  Stack_(158);
+		Stack_ a = new Stack_(158);
 		int i;
 		String str = " ";
 		String str1 = "";
@@ -14,7 +15,7 @@ public class AnagramStack {
 		String[] str2 = new String[167];
 		String s = "";
 		int arr[] = Utility.prime();
-		
+
 //		for(i=0;i<arr.length;i++)
 //		{
 //			System.out.println(""+arr[i]);
@@ -37,7 +38,7 @@ public class AnagramStack {
 				boolean status = Utility.isAnagram(str, str1);
 
 				if (status) {
-					System.out.println(""+strarr[j]);
+					System.out.print(" " + strarr[j]);
 					a.push(strarr[i]);
 					a.push(strarr[j]);
 
@@ -48,9 +49,9 @@ public class AnagramStack {
 		}
 		System.out.println();
 		System.out.println(" Pop:");
-	for (i = 0; i < a.size; i++) {
-		a.pop();			// System.out.println(""+s);
-	}
+		for (i = 0; i < a.size; i++) {
+			a.pop(); // System.out.println(""+s);
+		}
 
 	}
 

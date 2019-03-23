@@ -1,5 +1,6 @@
 package com.BridgeIt.DataStructres;
 
+import com.BridgeIt.DSUtlity.Queue;
 import com.BridgeIt.util.Utility;
 
 public class AnagramQueue {
@@ -12,7 +13,7 @@ public class AnagramQueue {
 		String str1 = " ";
 		String add = " ";
 		String[] strArry = new String[167];
-		
+
 		int arr[] = Utility.prime();
 
 		String[] strarr = new String[arr.length];
@@ -32,7 +33,7 @@ public class AnagramQueue {
 				boolean status = Utility.isAnagram(str, str1);
 
 				if (status) {
-					System.out.print("  "+strarr[j]);
+					System.out.print("  " + strarr[j]);
 					a.enQueue(strarr[i]);
 					a.enQueue(strarr[j]);
 

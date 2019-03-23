@@ -7,6 +7,7 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 
+import com.BridgeIt.DSUtlity.LinkedList;
 import com.BridgeIt.util.Utility;
 
 public class Hashing {
@@ -25,7 +26,7 @@ public class Hashing {
 			String str = br.readLine();
 
 			System.out.println(str);
-
+			// String[] strA=new String[100];
 			String[] strA = str.split(" ");
 			for (int i = 0; i < strA.length; i++) {
 				int slotNum = hash(strA[i]);
@@ -39,9 +40,9 @@ public class Hashing {
 				System.out.print(i + "==> ");
 				slot[i].displayList();
 			}
-			
+
 			System.out.println("Enter the String to search:");
-			String key =Utility.getNextLine();
+			String key = Utility.getNextLine();
 			int slotNumber = hash(key);
 			boolean value = slot[slotNumber].search(key);
 			if (value) {

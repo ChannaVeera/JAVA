@@ -1,23 +1,22 @@
 package com.BridgeIt.DataStructres;
 
+import com.BridgeIt.DSUtlity.Queue;
 import com.BridgeIt.util.Utility;
 
 public class CalendarQueue {
 
 	@SuppressWarnings("unchecked")
 	public static void main(String[] args) {
-		
-		TEST queue = new TEST(100);
+
+		Queue queue = new Queue(100);
 
 		String[] months = { "", "January", "February", "March", "April", "May", " June", "July", "August", "September",
 				"October", "November", "December" };
 		int[] date = { 0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 };
 
-		
 		int d = Integer.parseInt(args[0]);
 		int month = Integer.parseInt(args[1]);
 		int year = Integer.parseInt(args[2]);
-	
 
 		if (month == 2 && year(year)) {
 			date[month] = 29;
@@ -27,10 +26,8 @@ public class CalendarQueue {
 		int arr[][] = new int[6][7];
 		int x = 1;
 
-		for (int i = 0; i < 6; i++) 
-		{
-			for (int j = day; j < 7; j++)
-			{
+		for (int i = 0; i < 6; i++) {
+			for (int j = day; j < 7; j++) {
 				if (x <= date[month]) {
 					arr[i][j] = x;
 					x++;
@@ -48,7 +45,7 @@ public class CalendarQueue {
 				if (arr[i][j] != 0) {
 					System.out.printf("%4d", arr[i][j]);
 
-					queue.enqueue(arr[i][j]);
+					queue.enQueue(arr[i][j]);
 				} else
 					System.out.printf("    ");
 			}
@@ -56,14 +53,11 @@ public class CalendarQueue {
 		}
 
 	}
-	public static boolean year(int  year)
-	{
-		if(year%4==0)
-		{
+
+	public static boolean year(int year) {
+		if (year % 4 == 0) {
 			return true;
-		}
-		else 						
-		{
+		} else {
 			return false;
 		}
 	}

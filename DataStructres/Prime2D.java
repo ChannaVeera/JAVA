@@ -9,12 +9,7 @@ package com.BridgeIt.DataStructres;
 
 import com.BridgeIt.util.Utility;
 
-public class Prime2D 
-{
-
-	/**
-	 * @param args : It takes string array as command line aruguments
-	 */
+public class Prime2D {
 
 	public static void main(String[] args)
 
