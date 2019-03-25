@@ -31,7 +31,7 @@ public class BinaryTree {
 		}
 		return fact2;
 	}
-
+	
 	public static long factoria12(long n) {
 		long n1 = n + 1;
 		for (int i = 1; i <= n1; i++) {

@@ -15,6 +15,7 @@ public class Calander {
 		String[] months = { " ", "January", "February", "March", "April", "May", "June", "July", "August", "September",
 				"October", "November", "December" };
 		int[] date = { 0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 };// ends with 30 or 31 as ref
+		
 		int month = Integer.parseInt(args[0]);
 		int d = Integer.parseInt(args[1]);
 		int year = Integer.parseInt(args[2]);

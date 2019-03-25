@@ -9,33 +9,33 @@ public class AnagramQueue {
 
 		Queue a = new Queue(158);
 		int i;
-		String str = " ";
-		String str1 = " ";
-		String add = " ";
+		String string = " ";
+		String string1 = " ";
+		String addvalueTOString = " ";
 		String[] strArry = new String[167];
 
 		int arr[] = Utility.prime();
 
-		String[] strarr = new String[arr.length];
-		StringBuffer sb = new StringBuffer(arr.length);
+		String[] sttringArray = new String[arr.length];
+		StringBuffer stringBuffer = new StringBuffer(arr.length);
 
 		for (i = 0; i < arr.length; i++) {
-			add = sb.append(arr[i] + " ").toString();
+			addvalueTOString = stringBuffer.append(arr[i] + " ").toString();
 		}
 
-		strarr = add.split(" ");
+		sttringArray = addvalueTOString.split(" ");
 
 		System.out.println("Prime Anagram");
-		for (i = 0; i < strarr.length - 1; i++) {
-			for (int j = i + 1; j < strarr.length - 1; j++) {
-				str = strarr[i].toString();
-				str1 = strarr[j].toString();
-				boolean status = Utility.isAnagram(str, str1);
+		for (i = 0; i < sttringArray.length - 1; i++) {
+			for (int j = i + 1; j < sttringArray.length - 1; j++) {
+				string = sttringArray[i].toString();
+				string1 = sttringArray[j].toString();
+				boolean status = Utility.isAnagram(string, string1);
 
 				if (status) {
-					System.out.print("  " + strarr[j]);
-					a.enQueue(strarr[i]);
-					a.enQueue(strarr[j]);
+					System.out.print("  " + sttringArray[j]);
+					a.enQueue(sttringArray[i]);
+					a.enQueue(sttringArray[j]);
 
 				}
 

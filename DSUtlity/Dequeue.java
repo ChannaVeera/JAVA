@@ -1,6 +1,6 @@
 package com.BridgeIt.DSUtlity;
 
-public class Dequeueue<T> {
+public class Dequeue<T> {
 
 	public static int capacity = 100;
 	public static String[] str = new String[capacity];

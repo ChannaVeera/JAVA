@@ -9,11 +9,11 @@ public class AnagramStack {
 	public static void main(String[] args) {
 		Stack_ a = new Stack_(158);
 		int i;
-		String str = " ";
-		String str1 = "";
-		String add = " ";
+		String string = " ";
+		String string1 = "";
+		String addValueTOString = " ";
 		String[] str2 = new String[167];
-		String s = "";
+	
 		int arr[] = Utility.prime();
 
 //		for(i=0;i<arr.length;i++)
@@ -24,18 +24,18 @@ public class AnagramStack {
 		StringBuffer sb = new StringBuffer(arr.length);
 
 		for (i = 0; i < arr.length; i++) {
-			add = sb.append(arr[i] + " ").toString();
+			addValueTOString = sb.append(arr[i] + " ").toString();
 		}
 
-		strarr = add.split(" ");
+		strarr = addValueTOString.split(" ");
 
 		System.out.println("Prime Anagram");
 		System.out.println(" Push:");
 		for (i = 0; i < strarr.length - 1; i++) {
 			for (int j = i + 1; j < strarr.length - 1; j++) {
-				str = strarr[i].toString();
-				str1 = strarr[j].toString();
-				boolean status = Utility.isAnagram(str, str1);
+				string = strarr[i].toString();
+				string1 = strarr[j].toString();
+				boolean status = Utility.isAnagram(string, string1);
 
 				if (status) {
 					System.out.print(" " + strarr[j]);
