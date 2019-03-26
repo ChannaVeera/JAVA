@@ -56,7 +56,7 @@ public class StockReport
 			stocks.add(s);
 		}
 		
-			mapper.writeValue(new File("/home/admin123/Documents/work/stock.json"), stocks);
+			mapper.writeValue(new File("/home/admin123/Documents/workourt/Java-Programs/src/com/BridgeIt/jsonFiles/stock.json"), stocks);
 			StockReport sockreport = new StockReport();
 			 sockreport .setStocks(stocks);
 

@@ -1,0 +1,20 @@
+[ {
+  "companyName" : "Shiva",
+  "stockSymbol" : "OM",
+  "noOfShares" : 383,
+  "price" : 1200,
+  "dateTime" : null
+}, {
+  "companyName" : "Ravana",
+  "stockSymbol" : "RADHYA",
+  "noOfShares" : 492,
+  "price" : 1000,
+  "dateTime" : null
+}, {
+  "companyName" : "Joker",
+  "stockSymbol" : "JK",
+  "noOfShares" : 455,
+  "price" : 1500,
+  "dateTime" : null
+} ]
+

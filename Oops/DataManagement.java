@@ -18,7 +18,7 @@ public class DataManagement
 	public static void main(String[] args) 
 	{
 		// to give a path 
-		final String path="/home/admin123/Documents/workourt/jsonFiles/inventory.json";
+		final String path="/home/admin123/Documents/workourt/Java-Programs/src/com/BridgeIt/jsonFiles/inventory.json";
 		// File class is an abstract representation of file and directory pathname.
 		File file = new File(path);
 		// jackson Object is created to use json

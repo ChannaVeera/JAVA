@@ -18,7 +18,7 @@ public class RegularExpression
 		
 		Scanner scanner = new Scanner(System.in);
 		Scanner scanner1= new Scanner(System.in);
-		final String path ="/home/admin123/Documents/workourt/jsonFiles/regexpression.json";
+		final String path ="/home/admin123/Documents/workourt/Java-Programs/src/com/BridgeIt/jsonFiles/regexpression.json";
 		File file=new File(path);
 		ObjectMapper mapper =new ObjectMapper();
 		try {
