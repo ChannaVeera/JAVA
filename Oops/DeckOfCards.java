@@ -1,6 +1,6 @@
 package com.BridgeIt.Oops;
 /******************************************************************************************
-* 	@purpose      :  To paly cards game
+* 	@purpose      :  To paly cards game using ,
 *  
 *  @author       : NK.CHANNAVEERA
 *  @version      : 1.0

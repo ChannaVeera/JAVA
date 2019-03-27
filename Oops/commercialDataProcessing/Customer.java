@@ -24,11 +24,11 @@ public class Customer
 		this.name = name;
 	}
 	// for share
-	public int getShiva() {
+	public int getShivaShares() {
 		return shivaShares;
 	}
 
-	public void setShiva(int shiva) {
+	public void setShivaShares(int shiva) {
 		this.shivaShares = shiva;
 	}
 

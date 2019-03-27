@@ -175,6 +175,23 @@ public class LinkedList<T> // T stands for generic
 		item = (T) n.data;
 		return item;
 	}
+	public T print()
+	{
+		Node temp=head;
+		
+	//	System.out.println("linkedlist:");
+	
+		while(temp!=null)
+		{
+			
+			System.out.println(temp.data);
+			
+			temp=temp.next;	
+			
+		}
+		//System.out.println("----------------------------------------------------");
+		return null;
+	}
 
 	/**
 	 * @purpose : This method is used to delete element at last in a list to T

@@ -23,5 +23,24 @@
   "shivaShares" : 1,
   "jokerShares" : 15,
   "ravanaShares" : 40
+}, {
+  "name" : "CHANNA",
+  "shivaShares" : 0,
+  "jokerShares" : 0,
+  "ravanaShares" : 0
+}, {
+  "name" : "ASWF",
+  "shivaShares" : 0,
+  "jokerShares" : 0,
+  "ravanaShares" : 0
+}, {
+  "name" : "RADHYA",
+  "shivaShares" : 0,
+  "jokerShares" : 0,
+  "ravanaShares" : 0
+}, {
+  "name" : "RAVANARADHYA",
+  "shivaShares" : 0,
+  "jokerShares" : 0,
+  "ravanaShares" : 0
 } ]
-
