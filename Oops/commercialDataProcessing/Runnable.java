@@ -52,7 +52,8 @@ public class Runnable
 				case 5: stockA.printReport();
 						break;
 						
-				case 6: value = false;
+				case 6: System.out.println("EXit");
+						value = false;
 						break;
 						
 				default: System.out.println("invalid choice");

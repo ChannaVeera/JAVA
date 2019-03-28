@@ -48,55 +48,59 @@ public class StockUtility {
 	 * return:int
 	 ******************************************************/
 
-	public static int searchCustomerIndex(String customersearchName, List<Customer> customerList) {
+	public static int searchCustomerIndex(String searchName, List<Customer> customerList)
+	{
 		int count = 0;
 		int index = -1;
-		for (int i = 0; i < customerList.size(); i++) {
+		for(int i = 0; i < customerList.size(); i++)
+		{
 			count = 0;
-			String customerName = customerList.get(i).getName();
-			if (customersearchName.compareTo(customerName) == 0) {
+			String custName = customerList.get(i).getName();
+			if(searchName.compareTo(custName) == 0)
+			{
 				index = i;
 				break;
-			} else {
+			}
+			else
+			{
 				count++;
 			}
+		}
+		if(count != 0)
+		{
+			System.err.println("Customer not found!");
+		}
 		
-
-		}
-		if (count != 0) {
-			System.err.println("Customer Has Not Found");
-		}
 		return index;
 	}
+	
 	/*****************************************************
 	 * perpose: To search by symbol of comany share
 	 * return:int
 	 ******************************************************/
 	public static int searchSharesBySymbol(String symbol, List<CompanyShares> companySharesList)
 	{
-		int count =0;
-		int index=-1;
-		for (int i=0;i<companySharesList.size();i++)
+		int count = 0;
+		int index = -1;
+		for(int i = 0; i < companySharesList.size(); i++)
 		{
-			count=0;
-			String searchSymbol=companySharesList.get(i).getCompanyName();
-					if(symbol.compareTo(searchSymbol)==0)
-					{
-						index=i;
-						break;
-					}
-					else
-					{
-						count++;
-					}
-					if(count!=0)
-					{
-						System.err.println("Not Found ");
-					}
-			
+			count = 0;
+			String companySymbol = companySharesList.get(i).getStockSymbol();
+			if(symbol.compareTo(companySymbol) == 0)
+			{
+				index = i;
+				break;
+			}
+			else
+			{
+				count++;
+			}
 		}
-		return index;
+		if(count != 0)
+		{
+			System.out.println("Customer not found!");
+		}
 		
+		return index;
 	}
-
 }

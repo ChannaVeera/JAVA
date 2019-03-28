@@ -10,7 +10,13 @@ public class Customer
 	public Customer() {
 		// TODO Auto-generated constructor stub
 	}
-	
+	public String toString()
+	{
+		StringBuilder sb = new StringBuilder();
+		sb.append(String.format("%-15s %-20d %-20d %-20d\n", name, shivaShares, jokerShares, ravanaShares));
+		
+		return sb.toString();
+	}
 	public Customer(String name)
 	{
 		this.name =name;

@@ -31,7 +31,7 @@ public class StockAccount implements StockInterface {
 			"/home/admin123/Documents/workourt/Java-Programs/src/com/BridgeIt/Oops/commercialDataProcessing/CompanyShares.json");
 
 	public StockAccount() {
-	
+
 	}
 
 	public StockAccount(String filename) {
@@ -45,7 +45,8 @@ public class StockAccount implements StockInterface {
 		try {
 			List<Customer> customerList = objectmapper.readValue(customerfile, new TypeReference<List<Customer>>() {
 			});
-			List<CompanyShares> companySharesList = objectmapper.readValue(companySharefile,new TypeReference<List<CompanyShares>>() {
+			List<CompanyShares> companySharesList = objectmapper.readValue(companySharefile,
+					new TypeReference<List<CompanyShares>>() {
 					});
 			System.out.println("Enter Customer/Person Name");
 			String searchName = Utility.getStringName().toUpperCase();
@@ -229,8 +230,8 @@ public class StockAccount implements StockInterface {
 			System.out.println(companySharesList.get(stockIndex).toString());
 
 			System.out.println("\n----------Customer Details----------");
-			System.out.printf("\n%-15s %-20s %-20s %-20s\n", "Cust. Name", "Reliance(Shares)", "HDFC(Shares)",
-					"ICICI(Shares)");
+			System.out.printf("\n%-15s %-20s %-20s %-20s\n", "Cust. Name", "Shiva(Shares)", "Joker(Shares)",
+					"Ravana(Shares)");
 			System.out.println("----------------------------------------------------------------------");
 			System.out.println(customerList.get(custIndex).toString());
 			System.out.println("==================In LIST==================");
@@ -281,7 +282,7 @@ public class StockAccount implements StockInterface {
 			List<Customer> customerList = objectmapper.readValue(customerfile, new TypeReference<List<Customer>>() {
 			});
 			System.out.println("\n----------Stock Details----------");
-			System.out.printf("%-15s %-20s %-20s\n", "Company Name", "NO. of Stocks", "Price");
+			System.out.printf("%-15s %-20s %-20s\n", "Company-Name", "NO.of Stocks", "Price");
 			System.out.println("-----------------------------------------------------------------");
 			for (int i = 0; i < companySharesList.size(); i++) {
 
@@ -299,5 +300,21 @@ public class StockAccount implements StockInterface {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+	}
+
+	public Customer getCustomer() {
+		return customer;
+	}
+
+	public void setCustomer(Customer customer) {
+		this.customer = customer;
+	}
+
+	public CompanyShares getCompanyShares() {
+		return companyShares;
+	}
+
+	public void setCompanyShares(CompanyShares companyShares) {
+		this.companyShares = companyShares;
 	}
 }

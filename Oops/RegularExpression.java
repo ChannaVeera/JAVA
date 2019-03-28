@@ -7,22 +7,23 @@ import java.util.Date;
 import java.util.Scanner;
 import java.util.regex.Pattern;
 
-import com.BridgeIt.util.Utility;
+
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 public class RegularExpression 
 {
+	@SuppressWarnings("resource")
 	public static void main(String[] args) 
 	{
 		
-		Scanner scanner = new Scanner(System.in);
-		Scanner scanner1= new Scanner(System.in);
+		Scanner scannerforString = new Scanner(System.in);
+		Scanner scannerforinteger= new Scanner(System.in);
 		final String path ="/home/admin123/Documents/workourt/Java-Programs/src/com/BridgeIt/jsonFiles/regexpression.json";
 		File file=new File(path);
 		ObjectMapper mapper =new ObjectMapper();
 		try {
-			JsonNode jsonnode =mapper.readTree(file);
+			
 			JsonNode rootNode=mapper.readTree(file);
 			System.out.println(""+rootNode);
 			String values="regular";
@@ -31,19 +32,19 @@ public class RegularExpression
 			String str=regular.asText();
 			System.out.println(""+str);
 			System.out.println("Enter your name");
-			String name =scanner.nextLine();
+			String name =scannerforString.nextLine();
 			if(Pattern.matches("[a-zA-Z]+", name))
 			{
 				str=str.replaceAll("<<name>>", name);
 			}
 			System.out.println("Enter FullName..");
-			String  fullName= scanner.nextLine();
+			String  fullName= scannerforString.nextLine();
 			if(Pattern.matches("[a-zA-Z.]+",fullName ))
 			{
 				str=str.replaceAll( "<<full name>>", fullName);
 			}
 			System.out.println("Enter your phoneNumber  ");
-			String phoneNumber =scanner1.nextLine();
+			String phoneNumber =scannerforinteger.nextLine();
 			if(Pattern.matches("[0-9]+",phoneNumber))
 			{
 				str=str.replaceAll("x{10}",phoneNumber);

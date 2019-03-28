@@ -26,12 +26,7 @@
 }, {
   "name" : "CHANNA",
   "shivaShares" : 0,
-  "jokerShares" : 0,
-  "ravanaShares" : 0
-}, {
-  "name" : "ASWF",
-  "shivaShares" : 0,
-  "jokerShares" : 0,
+  "jokerShares" : -4,
   "ravanaShares" : 0
 }, {
   "name" : "RADHYA",
@@ -40,6 +35,21 @@
   "ravanaShares" : 0
 }, {
   "name" : "RAVANARADHYA",
+  "shivaShares" : 0,
+  "jokerShares" : 0,
+  "ravanaShares" : 0
+}, {
+  "name" : "PRATHIMA",
+  "shivaShares" : -100,
+  "jokerShares" : -100,
+  "ravanaShares" : -100
+}, {
+  "name" : "",
+  "shivaShares" : 0,
+  "jokerShares" : 0,
+  "ravanaShares" : 0
+}, {
+  "name" : "YUI",
   "shivaShares" : 0,
   "jokerShares" : 0,
   "ravanaShares" : 0
