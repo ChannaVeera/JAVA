@@ -1,10 +1,15 @@
 package com.BridgeIt.Oops.AddressBook;
-
+/**
+* 	@purpose     :  To hold address all the operation of address book  
+*  @author       :  NK.Channaveera
+*  @version      : 1.0
+*  @since        : 29-03-2019
+***/
 import java.util.Scanner;
 
 public class Menu 
 {
-	static AddressBook addressBook = new AddressBook();
+	static AddressBook addressBook = new AddressBook();// to implement all the methods 
 	public static void addressMenu(boolean value)
 	{
 	Scanner sc=new Scanner(System.in);
@@ -27,34 +32,34 @@ public class Menu
 			int n=sc.nextInt();
 			switch(n)
 			{
-				case 1:	AddressBookController.addnewCustomerBook();
+				case 1:	AddressBookManager.addnewCustomerBook();
 						break;
 						
-				case 2: AddressBookController.openExistingAddressBook();						
+				case 2: AddressBookManager.openExistingAddressBook();						
 						break;
 					
-				case 3: AddressBookController.addPersonInAddressBook();
+				case 3: AddressBookManager.addPersonInAddressBook();
 						break;
 						
-				case 4:	AddressBookController.updatePersonInAddressBook();
+				case 4:	AddressBookManager.updatePersonInAddressBook();
 						break;						
 						
-				case 5: AddressBookController.removePersonInAddressBook();
+				case 5: AddressBookManager.removePersonInAddressBook();
 						break;
 					
-				case 6:	AddressBookController.sortAddressBookByName();
+				case 6:	AddressBookManager.sortAddressBookByName();
 						break;
 						
-				case 7: AddressBookController.sortAddressBookByzipCode();;
+				case 7: AddressBookManager.sortAddressBookByzipCode();;
 						break;
 					
-				case 8: AddressBookController.printAddressBook();
+				case 8: AddressBookManager.printAddressBook();
 						break;
 					
-				case 9: AddressBookController.saveAddressBook();
+				case 9: AddressBookManager.saveAddressBook();
 						break;
 						
-				case 10: AddressBookController.saveAsAnotherAddressBook();		
+				case 10: AddressBookManager.saveAsAnotherAddressBook();		
 						break;
 						
 				case 11: System.out.println("\nApplication stopped!\n"); 

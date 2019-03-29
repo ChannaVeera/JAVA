@@ -9,11 +9,17 @@ import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 public interface IAddress 
+/**
+* 	@purpose     :  To hold address path to save file read from //destination 
+*  @author       Nk.channaveera
+*  @version      : 1.0
+*  @since        : 29-03-2019
+***/
 {
 	ObjectMapper objectmapper =new ObjectMapper();
 	public static File getPathOfFile(String fileName, String fileExtension)
 	{
-		fileName = "/home/admin1/eclipse-workspace/jsonfiles"
+		fileName = "/home/admin123/Documents/workourt/Java-Programs/src/com/BridgeIt/Oops/AddressBook/"
 				+ fileName + fileExtension;
 		
 		File file = new File(fileName);

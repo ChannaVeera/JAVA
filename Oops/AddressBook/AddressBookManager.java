@@ -1,8 +1,15 @@
 package com.BridgeIt.Oops.AddressBook;
+/**
+* 	@purpose     :  To hold address operation and implemention of like add ,edit etc..  
+*  @author       :Nk.channaveera
+*  @version      : 1.0
+*  @since        : 29-03-2019
+***/
 
 import java.util.Scanner;
 
-public class AddressBookController {
+public class AddressBookManager 
+{
 	static AddressBook addressBook = new AddressBook();
 	static Scanner scannerString = new Scanner(System.in);
 
@@ -143,7 +150,7 @@ public class AddressBookController {
 	{
 		if(addressBook.getFile() != null)
 		{
-			AddressInterface.saveFile(addressBook.getFile());
+			IAddress.saveFile(addressBook.getFile());
 			System.out.println("\nAddressBook Saved Successfully!\n");
 		}
 		else
@@ -160,7 +167,7 @@ public class AddressBookController {
 			System.out.println("enter the file extension: ");
 			String fileExt = scannerString.nextLine();
 			if (fileExt.equals(".json") || fileExt.equals(".txt")) {
-				AddressInterface.saveFile(FileSystem.createNewFile(fileName, fileExt));
+				IAddress.saveFile(FileSystem.createNewFile(fileName, fileExt));
 				System.out.println("\nAddressBook Saved to another file successfully!\n");
 			}
 		} else {

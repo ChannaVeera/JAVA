@@ -5,62 +5,70 @@ import java.io.File;
 import java.util.List;
 import java.util.*;
 
-public class AddressBook implements IAddress {
+public class AddressBook implements IAddress 
+{
 
 	Scanner scannerString = new Scanner(System.in);
-	Scanner sc1 = new Scanner(System.in);
+	Scanner scanner = new Scanner(System.in);
 	private List<Person> newList = new ArrayList<Person>();
 	FileSystem fileSystem = new FileSystem();
 	static File file;
 	private static String fileName;
 
-	public AddressBook() {
+	public AddressBook() 
+	{
+		
 	}
-
-	public void createAddressBook() {
+	public void createAddressBook() 
+	{
 		System.out.println("Enter File name ");
 		String fileName = scannerString.next();
 		System.out.println("Enter FileExtion");
-		String fileExtion = scannerString.next();
-		if (fileExtion == ".json" || fileExtion == ".txt") {
+		String fileExtion = scanner.next();
+		if (fileExtion.equals(".json")||fileExtion.equals(".txt")) 
+		{          //fileExtion == ".json" || fileExtion == ".txt") {
+			@SuppressWarnings("static-access")
 			File newFile = fileSystem.createNewFile(fileName.trim(), fileExtion);
 			setFile(newFile);
 			setFileName(fileName + fileExtion);
 			FileSystem.setList(newList);
 			System.out.println("\nNew AddressBook Created!\n");
 		} else {
-			System.out.println("\nOnly .json and .txt files can be created!\n");
+		System.out.println("\nOnly .json and .txt files can be created!\n");
 		}
 	}
 
-	public void openAddressBook() {
+	public void openAddressBook() 
+	{
 		System.out.println("Enter File name");
 		String fileName = scannerString.nextLine();
 		System.out.println("Enter FileExtion");
-		String fileExtion = scannerString.next();
-		if (fileExtion == ".json" || fileExtion == ".json") {
+		String fileExtion = scanner.next();
+		if (fileExtion.equals(".json")||fileExtion.equals(".txt")) 
+		{
 			File openFile = IAddress.getPathOfFile(fileName, fileExtion);
 			IAddress.readFile(openFile);
 			setFile(openFile);
 			setFileName(fileName + fileExtion);
 		} else {
-			System.out.println("\\nOnly .json and .txt files can be created!\\n");
+			System.out.println("\\n Only .json and .txt files can be created!\\n");
 		}
 	}
 
 	public void addPerson(String firstName, String lastName, String address, String city, String state, String zip,
 			String phone) {
 		Person personnewEntry = new Person(firstName, lastName, address, city, state, zip, phone);
-		newList = fileSystem.getList();
+		newList = FileSystem.getList();
 		newList.add(personnewEntry);
-		fileSystem.setList(newList);
+		FileSystem.setList(newList);
 	}
 
-	public void getFullOfPerson(String searchName) {
+	public void getFullOfPerson(String searchName) 
+	{
 		int index = searchPersonbyFirstName(searchName);
 		if (index >= 0) {
-			System.out.println(fileSystem.getList().get(index).getFirstName() + " "
-					+ fileSystem.getList().get(index).getLastName());
+			System.out.println(FileSystem.getList().get(index).getFirstName() + " "
+					+ FileSystem.getList().get(index).getLastName());
 		} else {
 			System.out.println("Person Not Found");
 		}
@@ -103,27 +111,34 @@ public class AddressBook implements IAddress {
 	
 	// getters and Sterrs
 
-	public List<Person> getPersonList() {
+	public List<Person> getPersonList()
+	{
 		return newList;
 	}
 
-	public void setPersonList(List<Person> personList) {
+	public void setPersonList(List<Person> personList) 
+	{
 		this.newList = personList;
 	}
 
-	public File getFile() {
+	public File getFile() 
+	{
 		return file;
 	}
 
-	public void setFile(File file) {
+	public void setFile(File file) 
+	{
 		AddressBook.file = file;
 	}
 
-	public int searchPersonbyFirstName(String keyFName) {
+	public int searchPersonbyFirstName(String keyFName) 
+	{
 		int index = -1;
-		for (int i = 0; i < com.BridgeIt.Oops.AddressBook.FileSystem.getList().size(); i++) {
+		for (int i = 0; i < com.BridgeIt.Oops.AddressBook.FileSystem.getList().size(); i++) 
+		{
 			String personFirstName = com.BridgeIt.Oops.AddressBook.FileSystem.getList().get(i).getFirstName();
-			if (keyFName.equals(personFirstName)) {
+			if (keyFName.equals(personFirstName)) 
+			{
 				index = i;
 				break;
 			}
@@ -132,11 +147,13 @@ public class AddressBook implements IAddress {
 		return index;
 	}
 
-	public String getFileName() {
+	public String getFileName() 
+	{
 		return fileName;
 	}
 
-	public void setFileName(String fileName) {
+	public void setFileName(String fileName) 
+	{
 		AddressBook.fileName = fileName;
 	}
 }

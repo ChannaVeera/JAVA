@@ -1,4 +1,10 @@
 package com.BridgeIt.Oops.AddressBook;
+/**
+* 	@purpose     :  To hold person address details and there getter and setter methods to get and set values  
+*  @author       Nk.channaveera
+*  @version      : 1.0
+*  @since        : 29-03-2019
+***/
 
 public class Person {
 	private String firstName;

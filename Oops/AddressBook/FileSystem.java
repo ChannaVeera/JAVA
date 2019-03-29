@@ -7,7 +7,7 @@ import java.util.List;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-public class FileSystem implements AddressInterface {
+public class FileSystem implements IAddress {
 	public static List<Person> personList = null;
 	public static ObjectMapper objM = new ObjectMapper();
 
@@ -20,7 +20,7 @@ public class FileSystem implements AddressInterface {
 	}
 
 	public static File createNewFile(String fileName, String fileExtension) {
-		File file = AddressInterface.getPathOfFile(fileName, fileExtension);
+		File file = IAddress.getPathOfFile(fileName, fileExtension);
 		try {
 			@SuppressWarnings({ "unused", "resource" })
 			FileWriter newFileWritten = new FileWriter(file);

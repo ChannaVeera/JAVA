@@ -86,6 +86,7 @@ public class LinkedList<T> // T stands for generic
 	public boolean search(T word)
 
 	{
+		@SuppressWarnings("rawtypes")
 		Node n = head; // making n as head node
 
 		while (n.next != null)// next reference value
