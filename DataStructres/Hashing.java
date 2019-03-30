@@ -18,11 +18,7 @@ import com.BridgeIt.DSUtlity.LinkedList;
 
 
 
-/**
- * 
- * @author Venkatesha E R date:11/03/19
- *
- */
+
 public class Hashing {
 	public static LinkedList slot[] = new LinkedList[11];
 

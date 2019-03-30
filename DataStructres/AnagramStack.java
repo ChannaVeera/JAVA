@@ -1,4 +1,11 @@
 package com.BridgeIt.DataStructres;
+/******************************************************************************************
+* 	@purpose      :  To find given VAlue is  Anagram or not using stack
+*  
+*  @author       : NK.CHANNAVEERA
+*  @version      : 1.0
+*  @since        : 23-03-2019
+******************************************************************************************/
 
 import com.BridgeIt.DSUtlity.Stack_;
 import com.BridgeIt.util.Utility;

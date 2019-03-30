@@ -32,6 +32,7 @@ public class StackUsing_LinkedList<T> {
 			System.out.print("stack overflow");
 			return;
 		}
+	//	System.out.println()
 		node.data = data; // storing data
 		node.ref = top;// changing reference value
 		top = node; // changing top node
