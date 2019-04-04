@@ -1,4 +1,4 @@
-package com.BridgeIt.Singleton;
+package com.BridgeIt.DsignPattern.CreationalDesign.Singleton;
 
 public class MainStaticBlockSingleton {
 

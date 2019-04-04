@@ -1,4 +1,4 @@
-package com.BridgeIt.FactoryDesign;
+package com.BridgeIt.DsignPattern.CreationalDesign.FactoryDesign;
 
 public class PC extends Computer {
 

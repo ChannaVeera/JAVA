@@ -1,8 +1,6 @@
-package com.BridgeIt.Singleton;
+package com.BridgeIt.DsignPattern.CreationalDesign.Singleton;
 
 import java.lang.reflect.Constructor;
-
-
 
 public class ReflectionSingletonTest {
 
